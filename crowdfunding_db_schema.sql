@@ -29,7 +29,6 @@ CREATE TABLE Campaign (
     description VARCHAR NOT NULL,
     goal FLOAT NOT NULL,
     pledged FLOAT NOT NULL,
-    outcome VARCHAR NOT NULL,
     backers_count INT NOT NULL,
     country CHAR(2) NOT NULL,
     currency CHAR(3) NOT NULL,
