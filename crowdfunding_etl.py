@@ -58,7 +58,7 @@ campaign_merged_df = pd.merge(campaign_cat, subcategory_df, on='subcategory', ho
 
 # Reorder columns and drop unwanted columns
 campaign_cleaned = campaign_merged_df[['cf_id', 'contact_id', 'company_name',
-                                         'description', 'goal', 'pledged', 'backers_count',
+                                         'description', 'goal', 'pledged', 'outcome', 'backers_count',
                                          'country', 'currency', 'launch_date', 'end_date', 'category_id',
                                          'subcategory_id']]
 
