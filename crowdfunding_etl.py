@@ -63,7 +63,7 @@ campaign_cleaned = campaign_merged_df[['cf_id', 'contact_id', 'company_name',
                                          'subcategory_id']]
 
 # Export the DataFrame as a CSV file. 
-campaign_cleaned.to_csv("Resources/campaign.csv", index=False)
+campaign_cleaned.to_csv("Output/campaign.csv", index=False)
 
 # Read the contacts.xlsx into a Pandas DataFrame.
 contact_info_df = pd.read_excel('Resources/contacts.xlsx', header=2, engine='openpyxl')
@@ -92,7 +92,7 @@ contact_info_df = pd.DataFrame(values, columns=keys[0])
 contact_info_df[['first_name', 'last_name']] = contact_info_df['name'].str.split(' ', n=2, expand=True)
 
 # Reorder columns and drop unwanted columns
-contact_info_df = contact_info_df[['contact_id', 'First_name', 'Last_name', 'email']]
+contact_info_df = contact_info_df[['contact_id', 'first_name', 'last_name', 'email']]
 
 # Export the DataFrame as a CSV file. 
-contact_info_df.to_csv("Resources/contacts.csv", encoding='utf8', index=False)
+contact_info_df.to_csv("Output/contacts.csv", encoding='utf8', index=False)
